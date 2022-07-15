@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/navigationToday"
+        android:icon="@drawable/today"
+        android:title="@string/today"/>
+
+    <item android:id="@+id/navigationExercise"
+        android:icon="@drawable/exercise"
+        android:title="@string/exercise"/>
+
+    <item android:id="@+id/navigationSettings"
+        android:icon="@drawable/settings"
+        android:title="@string/settings"/>
+
+</menu>

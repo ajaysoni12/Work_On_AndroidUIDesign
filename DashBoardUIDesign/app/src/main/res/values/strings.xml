@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DashBoardUIDesign</string>
+    <string name="today">Today</string>
+    <string name="exercise">Exercise</string>
+    <string name="settings">Settings</string>
+    <string name="good_morning_ajay">Good Morning Ajay</string>
+    <string name="search">Search</string>
+    <string name="diet_chart">Diet Chart</string>
+    <string name="meditation">Meditation</string>
+    <string name="yoga">Yoga</string>
+
+</resources>
