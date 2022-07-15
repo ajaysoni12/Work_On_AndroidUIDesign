@@ -1,7 +1,7 @@
 
 
 
-![App Screenshot](D:\App Development\App Development Project\LoginUIDesign)
+![App Screenshot](https://github.com/ajaysoni12/work_on_ui_-AndroidApp-/tree/master/DashBoardUIDesign)
 
 
 
@@ -13,10 +13,10 @@
 
 
 
-Simple Login App
+<h1>Simple Dashboard Acitity</h1>
 
-This is a java based simple login app which have simple entry email and password. 
+This is a xml+java based simple dashboard activity app which have some option like display in readme. 
 
-One of the first simple apps i created while on my journey to learn android app development. 
+One of the second simple ui apps i created while on my journey to learn android app development. 
 
 Here, I work on User_Interface of Android Apps. 
