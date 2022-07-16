@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">OrderTrackingScreenUIDesign</string>
+    <string name="track_order">track_order</string>
+    <string name="cancel">Cancel</string>
+    <string name="estimated_time">Estimated Time</string>
+    <string name="order_number">order number</string>
+    <string name="_30_minutes">30 Minutes</string>
+    <string name="_121212">#121212</string>
+    <string name="order_placed">Order Placed</string>
+    <string name="we_received_your_order">We received your order</string>
+    <string name="order_confirmed">Order Confirmed</string>
+    <string name="your_order_has_been_confirmed">Your order has been confirmed</string>
+    <string name="order_proceed">Order Proceed</string>
+    <string name="we_are_preparing_your_order">We are preparing your order</string>
+    <string name="create_by_ajay_soni">Create by Ajay Soni</string>
+</resources>

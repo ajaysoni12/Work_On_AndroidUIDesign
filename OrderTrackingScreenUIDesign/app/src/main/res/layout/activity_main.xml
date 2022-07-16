@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back"
+            app:tint="@color/colorWhite" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="@string/track_order"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:background="@drawable/drop_shadow"
+        app:layout_constraintTop_toBottomOf="@id/layoutToolbar"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorLabelBackground"
+        app:layout_constraintBottom_toTopOf="@id/viewDivider"
+        app:layout_constraintTop_toBottomOf="@id/layoutToolbar" />
+
+    <TextView
+        android:id="@+id/textEstimatedTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="center"
+        android:text="@string/estimated_time"
+        android:textAllCaps="true"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@id/textOrderNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutToolbar" />
+
+    <TextView
+        android:id="@+id/textOrderNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15sp"
+        android:layout_marginTop="15sp"
+        android:layout_marginEnd="15sp"
+        android:gravity="center"
+        android:text="@string/order_number"
+        android:textAllCaps="true"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textEstimatedTime"
+        app:layout_constraintTop_toBottomOf="@id/layoutToolbar"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:text="@string/_30_minutes"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/textEstimatedTime"
+        app:layout_constraintStart_toStartOf="@id/textEstimatedTime"
+        app:layout_constraintTop_toBottomOf="@id/textEstimatedTime" />
+
+    <TextView
+        android:id="@+id/textOrder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:text="@string/_121212"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/textOrderNumber"
+        app:layout_constraintStart_toStartOf="@id/textOrderNumber"
+        app:layout_constraintTop_toBottomOf="@id/textOrderNumber" />
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorDivider"
+        app:layout_constraintTop_toBottomOf="@id/textOrder" />
+
+    <View
+        android:id="@+id/viewOrderPlaced1"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/shape_status_order"
+        app:layout_constraintBottom_toBottomOf="@id/imageOrderPlaced"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageOrderPlaced"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageOrderPlaced"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/placed"
+        app:layout_constraintStart_toEndOf="@id/viewOrderPlaced1"
+        app:layout_constraintTop_toBottomOf="@id/viewDivider" />
+
+    <View
+        android:id="@+id/viewPlacedSupporter"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/imageOrderPlaced"
+        app:layout_constraintEnd_toEndOf="@id/imageOrderPlaced"
+        app:layout_constraintStart_toStartOf="@id/imageOrderPlaced"
+        app:layout_constraintTop_toTopOf="@id/imageOrderPlaced" />
+
+    <TextView
+        android:id="@+id/textOrderPlaced"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/order_placed"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/viewPlacedSupporter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageOrderPlaced" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/we_received_your_order"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/textOrderPlaced"
+        app:layout_constraintStart_toStartOf="@id/textOrderPlaced"
+        app:layout_constraintTop_toBottomOf="@id/textOrderPlaced" />
+
+    <View
+        android:id="@+id/viewOrderConfirmed"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/shape_status_completed"
+        app:layout_constraintBottom_toBottomOf="@id/imageOrderConfirmed"
+        app:layout_constraintEnd_toStartOf="@id/viewOrderConfirmed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageOrderConfirmed"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageOrderConfirmed"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/confirm"
+        app:layout_constraintStart_toEndOf="@id/viewOrderConfirmed"
+        app:layout_constraintTop_toBottomOf="@id/imageOrderPlaced" />
+
+    <View
+        android:id="@+id/viewConfirmedSupporter"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/imageOrderConfirmed"
+        app:layout_constraintEnd_toEndOf="@id/imageOrderConfirmed"
+        app:layout_constraintStart_toStartOf="@id/imageOrderConfirmed"
+        app:layout_constraintTop_toTopOf="@id/imageOrderConfirmed" />
+
+    <TextView
+        android:id="@+id/textOrderConfirmed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/order_confirmed"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/viewConfirmedSupporter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageOrderConfirmed" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/your_order_has_been_confirmed"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageOrderConfirmed"
+        app:layout_constraintTop_toBottomOf="@id/textOrderConfirmed" />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@id/viewOrderConfirmed"
+        app:layout_constraintEnd_toEndOf="@id/viewOrderPlaced1"
+        app:layout_constraintStart_toStartOf="@id/viewOrderPlaced1"
+        app:layout_constraintTop_toBottomOf="@id/viewOrderPlaced1" />
+
+    <View
+        android:id="@+id/viewOrderProceed"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/shape_status_current"
+        app:layout_constraintBottom_toBottomOf="@id/imageOrderProceed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageOrderProceed"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageOrderProceed"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/proceed"
+        app:layout_constraintStart_toEndOf="@id/viewOrderProceed"
+        app:layout_constraintTop_toBottomOf="@id/imageOrderConfirmed"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/viewProceedSupporter"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/imageOrderProceed"
+        app:layout_constraintEnd_toEndOf="@id/imageOrderProceed"
+        app:layout_constraintStart_toStartOf="@id/imageOrderProceed"
+        app:layout_constraintTop_toTopOf="@id/imageOrderProceed"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textOrderProceed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/order_proceed"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/viewOrderProceed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageOrderProceed" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/we_are_preparing_your_order"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/textOrderProceed"
+        app:layout_constraintStart_toStartOf="@id/textOrderProceed"
+        app:layout_constraintTop_toBottomOf="@id/textOrderProceed" />
+
+    <View
+        android:layout_width="3dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@id/viewOrderProceed"
+        app:layout_constraintEnd_toEndOf="@id/viewOrderConfirmed"
+        app:layout_constraintStart_toStartOf="@id/viewOrderConfirmed"
+        app:layout_constraintTop_toBottomOf="@id/viewOrderConfirmed" />
+
+    <View
+        android:id="@+id/viewOrderReady"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="30dp"
+        android:alpha="0.5"
+        android:background="@drawable/shape_status_remaining"
+        app:layout_constraintBottom_toBottomOf="@id/imageOrderReady"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageOrderReady"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageOrderReady"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/ready"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@id/viewOrderReady"
+        app:layout_constraintTop_toBottomOf="@id/imageOrderProceed"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/colorRemaining"
+        app:layout_constraintBottom_toTopOf="@id/viewOrderReady"
+        app:layout_constraintEnd_toEndOf="@id/viewOrderProceed"
+        app:layout_constraintStart_toStartOf="@id/viewOrderReady"
+        app:layout_constraintTop_toBottomOf="@id/viewOrderProceed" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@id/imageOrderReady"
+        app:layout_constraintEnd_toEndOf="@id/imageOrderReady"
+        app:layout_constraintStart_toStartOf="@id/imageOrderReady"
+        app:layout_constraintTop_toBottomOf="@id/imageOrderReady" />
+
+    <TextView
+        android:id="@+id/textOrderReady"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/order_proceed"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/viewOrderReady"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageOrderReady" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/we_are_preparing_your_order"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/textOrderReady"
+        app:layout_constraintStart_toStartOf="@id/textOrderReady"
+        app:layout_constraintTop_toBottomOf="@id/textOrderReady" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_by_ajay_soni"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/colorAccent"
+        android:padding="5dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
