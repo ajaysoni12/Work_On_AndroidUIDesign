@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MusicPlayerUIDesign</string>
+    <string name="lyrics">Lyrics</string>
+    <string name="_1_37">1:37</string>
+    <string name="_4_12">4:12</string>
+    <string name="current_song_title">Current Song Title</string>
+    <string name="artist_name">Artist Name</string>
+    <string name="now_playing">Now Playing</string>
+</resources>
