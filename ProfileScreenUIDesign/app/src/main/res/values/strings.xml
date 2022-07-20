@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ProfileScreenUIDesign</string>
+    <string name="ajay_soni">Ajay Soni</string>
+    <string name="textAbout">Developer | Alone | India</string>
+    <string name="_1000">1000</string>
+    <string name="_5M">5.4M</string>
+    <string name="_532">530</string>
+    <string name="post">post</string>
+    <string name="followers">followers</string>
+    <string name="following">following</string>
+    <string name="tags">tags</string>
+    <string name="stylish">Stylish</string>
+    <string name="innocent">Inncoent</string>
+    <string name="silent">Silent</string>
+    <string name="adventurous">Adventurous</string>
+    <string name="collection">Collection</string>
+    <string name="sign_in">Sign In</string>
+    <string name="yup">Yup!</string>
+    <string name="latest_post">latest Posts</string>
+</resources>
