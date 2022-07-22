@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/sign_in_background">
+
+        <TextView
+            android:id="@+id/textSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/sign_in"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageUsername"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textSignIn"
+            app:tint="@color/useColorHint" />
+
+        <EditText
+            android:id="@+id/inputUsername"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="10dp"
+            android:background="@null"
+            android:hint="@string/username"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:minHeight="40dp"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorHint"
+            android:textSize="16sp"
+            android:importantForAutofill="no"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/imageUsername"
+            app:layout_constraintEnd_toEndOf="@id/textSignIn"
+            app:layout_constraintStart_toEndOf="@id/imageUsername"
+            app:layout_constraintTop_toTopOf="@id/imageUsername" />
+
+        <View
+            android:id="@+id/viewDivideUsername"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorHint"
+            app:layout_constraintEnd_toEndOf="@id/textSignIn"
+            app:layout_constraintStart_toStartOf="@id/textSignIn"
+            app:layout_constraintTop_toBottomOf="@id/inputUsername" />
+
+        <ImageView
+            android:id="@+id/imagePassword"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/key"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputUsername"
+            app:tint="@color/useColorHint" />
+
+        <EditText
+            android:id="@+id/inputPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="10dp"
+            android:background="@null"
+            android:hint="@string/username"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:minHeight="40dp"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorHint"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/imagePassword"
+            app:layout_constraintEnd_toEndOf="@id/textSignIn"
+            app:layout_constraintStart_toEndOf="@id/imagePassword"
+            app:layout_constraintTop_toTopOf="@id/imagePassword" />
+
+        <View
+            android:id="@+id/viewDividePassword"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorHint"
+            app:layout_constraintEnd_toEndOf="@id/textSignIn"
+            app:layout_constraintStart_toStartOf="@id/textSignIn"
+            app:layout_constraintTop_toBottomOf="@id/inputPassword" />
+
+        <ImageView
+            android:id="@+id/imageButtonSignIn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/button_background"
+            android:contentDescription="@string/app_name"
+            android:padding="15dp"
+            android:src="@drawable/next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewDividePassword"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/forgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_password"
+            android:textColor="@color/colorHint"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/imageButtonSignIn"
+            app:layout_constraintStart_toStartOf="@id/textSignIn"
+            app:layout_constraintTop_toTopOf="@id/imageButtonSignIn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
