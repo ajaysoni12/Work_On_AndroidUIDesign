@@ -1,22 +1,7 @@
 
+<h2>#WorkOnUIDesign</h2>
+<h4>AndroidCollapsingUIDesign</h4>
 
-
-![App Screenshot](D:\App Development\App Development Project\LoginUIDesign)
-
-
-
-
-
-
-
-
-
-
-
-Simple Login App
-
-This is a java based simple login app which have simple entry email and password. 
-
-One of the first simple apps i created while on my journey to learn android app development. 
-
-Here, I work on User_Interface of Android Apps. 
+https://github.com/ajaysoni12/work_on_ui_-AndroidApp-/blob/master/AndroidCollaspsingUIDesign/vidoes/My%20Video1.mp4
+For video
+ 
