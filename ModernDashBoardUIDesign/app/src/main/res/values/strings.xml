@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ModernDashBoardUIDesign</string>
+    <string name="my_awesome_app">My Awesome App</string>
+    <string name="dummy_text">This is simple dummy text, we can and we will, or dummy text nhi hai</string>
+    <string name="diet_chart">Diet Chart</string>
+    <string name="setting">Setting</string>
+    <string name="more">More</string>
+</resources>
