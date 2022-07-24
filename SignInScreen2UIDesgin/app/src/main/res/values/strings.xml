@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SignInScreen2</string>
+    <string name="forgot_password">Forgot your password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="mobile">Mobile</string>
+    <string name="password">Password</string>
+    <string name="textSignIN">Sign in to your account</string>
+    <string name="welcome_back">Welcome Back</string>
+</resources>
